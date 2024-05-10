@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediTrack</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      
+    }
+  
+    header {
+      background-color: #2980b9;
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+      
+    }
+    
+    main {
+      padding: 2rem;
+    }
+    
+    section {
+      margin-bottom: 2rem;
+    }
+    
+    .medicine-type {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+    }
+    
+    .medicine-type h2 {
+      color: #2980b9;
+      margin-bottom: 1rem;
+    }
+    
+    .type-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .type-container button {
+      background-color: #2980b9;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem;
+      cursor: pointer;
+    }
+    
+    .type-container button:hover {
+      background-color: #1c7db8;
+    }
+    
+    .medicine-details {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+    }
+    
+    .medicine-details h2 {
+      color: #2980b9;
+      margin-bottom: 1rem;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    label {
+      margin-bottom: 0.5rem;
+      color: #555;
+    }
+    
+    input[type="text"],
+    input[type="date"],
+    select {
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+    
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+    
+    button[type="submit"] {
+      background-color: #2980b9;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+    
+    button[type="submit"]:hover {
+      background-color: #1c7db8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Add Medicine</h1>
+  </header>
+  <main>
+    <section class="medicine-type">
+      <h2>Choose Medicine Type</h2>
+      <div class="type-container">
+        <button>Topical</button>
+        <button>Drops</button>
+        <button>Inhaler</button>
+        <button>Injection</button>
+        <button>Implants/Patches</button>
+        <button>Tablets</button>
+        <button>Capsules</button>
+        <button>Liquid</button>
+      </div>
+    </section>
+    <section class="medicine-details">
+      <h2>Add Medicine Details</h2>
+      <form>
+        <label for="dosage">Dosage:</label>
+        <input type="text" id="dosage" required>
+        <div style="display: flex;">
+          <div style="flex: 1;">
+            <label for="mfg-date">Mfg. Date:</label>
+            <input type="date" id="mfg-date" required>
+          </div>
+          <div style="flex: 1;">
+            <label for="exp-date">Exp. Date:</label>
+            <input type="date" id="exp-date" required>
+          </div>
+        </div>
+        <label for="frequency">Frequency:</label>
+        <select id="frequency" required>
+          <option value="daily">Daily</option>
+          <option value="weekly">Weekly</option>
+        </select>
+        <label for="time">Time(s)/day to take medicine:</label>
+        <div class="checkboxes">
+          <label><input type="checkbox" value="before-breakfast"> Before Breakfast</label>
+          <label><input type="checkbox" value="after-breakfast"> After Breakfast</label>
+          <label><input type="checkbox" value="before-lunch"> Before Lunch</label>
+          <label><input type="checkbox" value="after-lunch"> After Lunch</label>
+          <label><input type="checkbox" value="before-dinner"> Before Dinner</label>
+          <label><input type="checkbox" value="after-dinner"> After Dinner</label>
+        </div>
+        <label for="quantity">Add Additional Details:</label>
+        <input type="text" id="quantity" required>
+        <button type="submit">Add Medicine</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

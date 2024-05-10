@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prescription Scanner</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    
+    header {
+      background-color: #2980b9;
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    #scanner {
+      width: 300px;
+      height: 200px;
+      background-color: #fff;
+      border: 2px dashed #aaa;
+      border-radius: 10px;
+      margin: 0 auto 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      color: #aaa;
+    }
+    
+    #scan-btn {
+      background-color: #2980b9;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    
+    #scan-btn:hover {
+      background-color: #1c7db8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Prescription Scanner</h1>
+  </header>
+  <main>
+    <div id="scanner">
+      Place your prescription here
+    </div>
+    <button id="scan-btn">Scan Prescription</button>
+  </main>
+</body>
+</html>

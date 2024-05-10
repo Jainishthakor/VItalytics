@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Page</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    background-color: #333;
+    padding: 15px 0;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+  }
+
+  .profile {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #333;
+    padding: 20px;
+    transition: left 0.3s ease;
+  }
+
+  .profile.open {
+    left: 0;
+  }
+
+  .profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  .profile p {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .profile ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .profile ul li {
+    margin-bottom: 10px;
+  }
+
+  .profile ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  .box {
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .box img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+
+  .box button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .box button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Category</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Feedback</a></li>
+      <li><a href="#" id="profileBtn">Profile</a></li>
+    </ul>
+  </nav>
+
+  <div class="profile" id="profile">
+    <div class="profile-info">
+      <img src="profile.jpg" alt="Profile Picture">
+      <p>Name: John Doe</p>
+      <p>Email: john.doe@example.com</p>
+      <br>
+        <hr width="80%" size="5">
+      <br><br>
+      <ul>
+        <li><a href="#">ome</a></li>
+        <li><a href="#">Notification</a></li>
+        <li><a href="#">Devices</a></li>
+        
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Sign Out</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="box">
+      <img src="Add_medicine.jpg" alt="Image 1">
+      <button ><a href="Add_medicine.html">Add Medicine</a></button>
+    </div>
+
+    <div class="box">
+      <img src="medicine_bottel.jpg" alt="Image 2">
+      <button>Suggestions</button>
+    </div>
+
+    <div class="box">
+      <img src="scan2.jpg" alt="Image 3">
+      <button><a href="Scan_pre.html">Scan Prescription</a></button>
+    </div>
+
+    <div class="box">
+      <img src="stock2.jpg" alt="Image 4">
+      <button>Stock</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('profileBtn').addEventListener('click', function() {
+      document.getElementById('profile').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
